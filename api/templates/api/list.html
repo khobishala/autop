@@ -1,0 +1,12 @@
+{% extends 'api/layout.html' %}
+
+{% block content %}
+  <div class="file-list">
+    <h1>List of Files</h1>
+    <ol>
+    {%for file in files%}
+      <li><a href="{% url 'download' file.id %}" target="_blank">{{file.file.url}}</a></li>
+    {%endfor%}
+    </ol>
+  </div>
+{% endblock %}
