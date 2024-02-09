@@ -21,5 +21,7 @@ def list(request):
 def download(request, id):
     file = get_object_or_404(File, pk=id)
     response = FileResponse(file.file, as_attachment=True)
+    
+    
     file.delete()
     return response
