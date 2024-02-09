@@ -3,6 +3,7 @@ from . import views
 from .models import *
 from django.http import FileResponse
 from django.shortcuts import get_object_or_404
+from django.http import HttpResponse
 
 # Create your views here.
 def upload(request):
@@ -14,9 +15,17 @@ def upload(request):
     return render(request,'api/upload.html')
 
 def list(request):
-    return render(request,"api/list.html",{
-        'files':File.objects.all()
-    })
+    files = File.objects.all()
+    content =""
+   
+    for file_obj in files:
+        link = f"https://automaton-project.onrender.com/download/{file_obj.id}\n"
+        content+=link
+        
+
+    response = HttpResponse(content, content_type='text/plain')
+    response['Content-Disposition'] = 'inline; filename=links.txt'
+    return response 
 
 def download(request, id):
     file = get_object_or_404(File, pk=id)
