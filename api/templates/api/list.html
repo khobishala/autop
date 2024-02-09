@@ -5,7 +5,7 @@
     <h1>List of Files</h1>
     <ol>
     {%for file in files%}
-      <li><a href="{% url 'download' file.id %}" target="_blank">{{file.file.url}}</a></li>
+      <li><a href="{% url 'download' file.id %}" target="_blank">https://automaton-project.onrender.com/download/{{file.id}}</a></li>
     {%endfor%}
     </ol>
   </div>
