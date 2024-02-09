@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', default="django-insecure-4yetehud9zfy3k+(ic!*(ovgmqn8s1q4k*-hm+ch(u!dhv&o#h")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['automaton-project.onrender.com']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTuERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:   
