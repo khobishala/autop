@@ -34,7 +34,7 @@ def list(request):
     content =""
    
     for file_obj in files:
-        link = f"https://automaton-project.onrender.com/download/{file_obj.id}\n"
+        link = f"https://autop-final.onrender.com/download/{file_obj.id}\n"
         content+=link
         
 
