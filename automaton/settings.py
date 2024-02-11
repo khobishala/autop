@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default="django-insecure-4yetehud9zfy3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['automaton-project.onrender.com']
+ALLOWED_HOSTS = ['autop-final.onrender.com']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTuERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:   
