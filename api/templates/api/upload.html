@@ -3,6 +3,11 @@
 {% block content %}
   <div class="upload-form">
     <h1>File Upload</h1>
+
+    <!-- Display disk space information -->
+    <p>Total Disk Space: {{ total_space }} GB</p>
+    <p>Free Disk Space: {{ free_space }} GB</p>
+
     <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
       {% csrf_token %}
       <label for="file">Choose a file:</label>
